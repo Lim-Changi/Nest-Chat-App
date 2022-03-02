@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
+import { ChatsModule } from './chats/chats.module';
 
 @Module({
   imports: [
@@ -8,6 +9,7 @@ import { AppController } from './app.controller';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    ChatsModule,
   ],
   controllers: [AppController],
 })
